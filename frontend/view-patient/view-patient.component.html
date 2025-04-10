@@ -1,0 +1,67 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+        
+    <a style="color: white;" class="navbar-brand" href="#">Gn Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/docdash">Back</a>
+            </li>
+        </ul>
+      
+    </div>
+  
+</nav>
+
+<br>
+
+
+<div class="container mt-5">
+    <div class="card shadow rounded p-4">
+        <h4 class="mb-4 text-primary text-center"><b>Patient Details</b></h4>
+        
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Patient ID :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.id}}</p></div>
+        </div>
+
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Name of the patient :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.name}}</p></div>
+        </div>
+
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Age of the patient :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.age}}</p></div>
+        </div>
+
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Blood group of the patient :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.blood}}</p></div>
+        </div>
+
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Prescription :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.prescription}}</p></div>
+        </div>
+
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Dose :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.dose}}</p></div>
+        </div>
+
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Urgency :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.urgency}}</p></div>
+        </div>
+
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label fw-bold"><b>Fees :</b></label>
+            <div class="col-sm-9"><p class="form-control-plaintext">{{patient.fees}}</p></div>
+        </div>
+    </div>
+</div>
+
+<br><br>

@@ -1,0 +1,79 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+        
+    <a style="color: white;" class="navbar-brand" href="#">Gn Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/create-patient">Add Patient</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/medicinelist">View Medicines</a>
+            </li>
+        </ul>
+
+        <div class="mx-2">
+        
+            <button style="margin: 5px; color: white;" (click)="logout()" class="btn btn-danger">Logout</button>
+                      
+        </div>
+      
+    </div>
+  
+</nav>
+
+<div class="container">
+<hr>
+    <h2 style="text-align: center;margin-top: 20PX;">Appointments</h2>
+    <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+        Welcome to Doctor Dashboard. Please find the patient list below!!. If you want to move to Home Page then please click "Go Back".</marquee></a>
+<hr>
+<br>
+    <a style="color: rgb(86, 86, 86); font-size: xx-large;">Current Patient List in the Queue</a>
+    <div class="tableFixHead">
+<br>
+
+
+<div class="tableFixHead">
+    <table class="table table-stripped">
+
+        <thead class="table-header">
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Dose</th>
+                <th>Prescription</th>
+                <th>Blood</th>
+                <th>Urgency</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let patient of patients">
+                <td><b>{{patient.id}}</b></td>
+                <td>{{patient.name}}</td>
+                <td>{{patient.age}}</td>
+                <td>{{patient.dose}}</td>
+                <td>{{patient.prescription}}</td>
+                <td>{{patient.blood}}</td>
+                <td>{{patient.urgency}}</td>
+                <td>
+                    <button (click)="update(patient.id)" class="btn btn-success">Update</button>
+                    <button (click)="delete(patient.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                    <button (click)="view(patient.id)" class="btn btn-primary" style="margin-left: 10px;">View</button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</div>
+
+<p *ngIf="patients.length === 0">No patients found or API not working.</p>
